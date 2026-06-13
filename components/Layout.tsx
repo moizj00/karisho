@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Client Resources', path: '/resources' },
+    { name: 'Lawyer Letters', path: '/resources' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -27,11 +27,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="bg-karish-navy text-white py-2 px-4 text-xs sm:text-sm border-b border-slate-800">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex space-x-6">
-            <span className="flex items-center gap-2"><Phone size={14} className="text-karish-gold" /> (555) 123-4567</span>
-            <span className="flex items-center gap-2 hidden sm:flex"><Mail size={14} className="text-karish-gold" /> info@karishlaw.com</span>
+            <span className="flex items-center gap-2"><Phone size={14} className="text-karish-gold" /> 904-770-6366</span>
+            <span className="flex items-center gap-2 hidden sm:flex"><Mail size={14} className="text-karish-gold" /> help@karishlawfirm.com</span>
           </div>
           <div className="flex items-center gap-6">
-            <span className="hidden sm:block text-slate-300">Serving California State Wide</span>
+            <span className="hidden sm:block text-slate-300">Legacy. Value. Resolution.</span>
           </div>
         </div>
       </div>
@@ -96,6 +96,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   }`}
                 >
                   Services
+                </Link>
+                <Link
+                  to="/resources"
+                  className={`font-sans text-base font-medium transition-colors duration-200 uppercase tracking-wide ${
+                    isActive('/resources') 
+                      ? 'text-karish-gold' 
+                      : 'text-slate-300 hover:text-karish-gold'
+                  }`}
+                >
+                  Lawyer Letters
                 </Link>
                 <Link
                   to="/contact"
